@@ -52,6 +52,7 @@ h2
 	flex-direction: row
 	justify-content: flex-end
 	padding: 16px 10px 0 0
+	z-index: 400
 	a
 		display: block
 		padding: 10px 30px
@@ -855,12 +856,21 @@ h2
 	flex-direction: column
 	height: 100vh
 
+.mobile-disclaymer
+	padding: 15px 8%
+	border-top: 1px solid #e4e4e4
+	color: #adaeae
+	font-size: 12px
+	line-height: 16px
+	a
+		color: #273433
+		font-weight: 600
 
 
 
 /* ------------ Media Queries ------------ */
 // Large devices (desktops, more than 1200px)
-@media (min-width: 1299.98px)
+@media (min-width: 1499.98px)
   .earn-section > .container
 	  transform: scale(1.2)
   .linen-cash > .container
@@ -869,12 +879,13 @@ h2
   .social-networks
 	  transform: scale(1.2)
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px)
+
+@media (max-width: 1399.98px)
   .earn-section > .container
 	  transform: scale(.8)
-@media (max-height: 700.98px)
-  .earn-section > .container
-	  transform: scale(.8)
+
+
+
 
 @media (max-height: 610.98px)
 	
@@ -1194,21 +1205,34 @@ h2
 	.watch-video-block
 		background-image: none
 
+	.watch-video-section
+		padding: 30px 0
+
 // Extra small devices (portrait phones, less than 400px)
 @media (max-width: 399.98px) 
+	.tabs-wrap
+		width: 100%
 	.footer-nav
 		flex-direction: column
 		text-align: center
 		font-size: 18px
 		line-height: 32px
-	.options-item .option-item-name
-		padding-left: 15px
-		font-size: 14px
-	.options-item .options-range-bar
-		padding-left: 50px
+	.options-item 
+		padding: 6px 0
+		.option-item-name
+			padding-left: 15px
+			font-size: 14px
+		.options-range-bar
+			padding-left: 50px
 
-
-
+	.earn-section
+		height: auto
+	.earn-section>.container
+		transform: scale(1)
+	.options
+		height: auto
+	.linen-cash .full-height
+		height: auto
 
 
 
