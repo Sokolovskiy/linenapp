@@ -1,0 +1,1214 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+*
+	-webkit-font-smoothing: antialiased
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Fira Sans', sans-serif
+	overflow-x: hidden
+	color: $text
+
+.blue-text-color
+	color: #08CCC5
+.underline
+	width: 100%
+	max-width: 1100px
+	height: 1px
+	background-color: rgba(131, 143, 131, 0.32)
+h2
+	font-size: 36px
+//  Header
+
+
+.header
+	padding: 10px 0
+	background-color: #fff
+.logo-wrap
+	padding: 16px 0 0 0
+	display: block
+	.logo-img
+		width: 90px
+.header-nav
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	padding: 16px 10px 0 0
+	a
+		display: block
+		padding: 10px 30px
+		font-size: 14px
+		font-weight: 600
+		color: #222929a6
+		
+	.active
+		color: #000
+
+// Earn Section
+
+.earn-section
+	height: calc(100vh - 80px)
+	display: flex
+	justify-content: center
+	align-items: center
+	.underline
+		margin-top: 50px
+		width: 100%
+.earn-section > .container
+		
+	
+.earn-wrap
+	width: 100%
+	margin: 80px 0 0 0
+	.earn-title
+		font-size: 64px	
+		color: #000
+		font-weight: bold	
+	.earn-subtitle
+		margin-top: -10px
+		font-size: 16px
+		color: #626662
+		line-height: 24px
+	.earn-text
+		margin-top: 30px
+		font-size: 32px
+		color: #4E6665
+		line-height: 32px
+	h2
+		font-size: 36px
+		line-height: 48px
+		font-weight: 500
+	h3
+		margin-bottom: 0
+		font-size: 12px
+		line-height: 24px
+		color: #4E6665
+		font-weight: normal
+		line-height: 1
+	h4 
+		line-height: .5
+		a
+			margin-left: 8px
+			font-size: 12px
+			line-height: 16px
+			color: #000
+			font-weight: 500
+			opacity: .92
+.header-form
+	margin: 50px 0 0 0 
+	.header-form__input, 
+	.header-form__btn
+		margin: 16px 0
+		display: block
+		width: 100%
+		height: 48px
+		border-radius: 28px	
+		border: none
+	.header-form__input
+		font-size: 16px
+		line-height: 32px
+		color: #626662
+		background-color: #F0F1F0
+		&:focus
+			outline: 1px solid #008000
+		&::placeholder
+			text-align: center
+			opacity: .56
+	.header-form__btn
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.06em
+		text-transform: uppercase
+		text-align: center
+		font-weight: 600
+		color: #fff
+		background-color: #08CCC5
+		transition: all .2s ease .2s
+		&:hover
+			transform: scale(1.1)
+	.header-form__info
+		font-size: 11px
+		line-height: 1.45
+		text-align: center
+		color: #1D1F1E
+		opacity: 0.4
+		a
+			font-weight: bold
+			text-decoration: none
+			color: #1D1F1E
+.earn-img-wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-end				
+.earn-img
+	padding: 0
+	display: block
+	width: 100%	
+
+//Earn statistic block	
+
+.statistic-block
+	padding: 44px 0
+.statistic-item
+	padding: 12px 0
+	display: flex
+	flex-direction: row
+	justify-content: start
+	img
+		display: block
+		width: 32px
+		height: 32px
+	.item-text
+		padding-left: 16px
+		.value
+			font-size: 28px
+			line-height: 28px
+			font-weight: 500
+			color: #08CCC5
+		.value-description
+			font-size: 14px
+			line-height: 20px
+			color: #4E6665
+
+
+// options section
+
+.options
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 96px 0 0 0
+	h2
+		font-size: 36px
+		line-height: 48px
+		font-weight: 500
+		color: #222929
+	.subtitle
+		font-size: 12px
+		line-height: 16px
+		color: #000
+		font-family: 'Source Sans Pro', sans-serif
+		opacity: .4
+	.underline
+		margin: 20px auto 0
+		max-width: 920px
+
+		
+.option-block
+	.title
+		padding-left: 40px
+		margin: 30px 0 30px 0
+		font-size: 18px
+		line-height: 24px
+		font-weight: 500
+		color: #222929
+	.item
+		padding: 12px 0
+		display: flex
+		flex-direction: row
+		justify-content: flex-start	
+		color: #4E6665
+		.item-icon
+			margin: 24px 0 0 0px 
+			width: 16px
+			height: 16px
+		.option-amount
+			margin: 20px 0 0 0
+			width: 65px
+			text-align: center
+			font-size: 12px
+			line-height: 24px
+	.hints
+		padding-left: 40px
+		font-size: 12px
+		line-height: 16px
+		opacity: .4
+			
+		
+.range-wrapper
+	padding-left: 24px
+	.range-title
+		font-size: 14px
+		line-height: 20px
+		color: #4E6665
+		font-family: 'Source Sans Pro', sans-serif	
+	.range-bar-img
+		width: 290px
+
+
+
+// linen-cash
+
+.linen-cash
+	padding: 50px 0
+	height: 100vh
+	display: flex
+	flex-direction: row
+	justify-content: flex-end	
+	color: #222929
+	.linen-cash-wrapper
+		width: 350px
+	.manage-cash-wrapper
+		padding-top: 20px
+	h2
+		margin-bottom: 10px
+		font-size: 36px
+		line-height: 48px
+		font-weight: 500
+	h3
+		margin-bottom: 0
+		font-size: 12px
+		line-height: 24px
+		color: #4E6665
+		font-weight: normal
+		line-height: 1
+	h4 
+		line-height: .5
+		a
+			margin-left: 8px
+			font-size: 12px
+			line-height: 16px
+			color: #000
+			font-weight: 500
+			opacity: .92
+	.linen-cash-text
+		padding-top: 30px
+		font-size: 16px
+		line-height: 24px
+.linen-cash-img-wrapper
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+.linen-cash-img
+	display: block
+	width: 70%
+
+// No fees
+
+.no-fees	
+.no-fees-wrapper
+	padding: 90px 160px
+	background-color: #08CCC5	
+.no-fees-item
+	.item-img
+		display: block
+		margin: 0 auto
+		width: 220px
+	.item-description
+		padding-top: 30px
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		color: #fff
+
+
+// experts
+
+.experts
+	padding: 96px
+	h2
+		padding-bottom: 90px
+.experts-item	
+	padding-bottom: 40px
+	font-size: 12px
+	.expert-img
+		margin: 0 auto
+		width: 123px
+		height: 123px
+		background-color: #C4C4C4
+		border-radius: 50%
+	.expert-name
+		padding: 14px 0 0 0
+		font-size: 14px
+		line-height: 28px
+		font-weight: 500
+		color: #222929
+		img
+			margin-left: 8px	
+			width: 16px
+			height: 16px
+			vertical-align: text-top
+	.position
+		color: #000
+
+
+
+// investors-section
+
+.investors-section
+	padding: 20px 0
+	.investors-wrap
+		padding: 0px 96px 0 96px
+		.investor-img
+			padding: 10px 0
+			display: block
+			width: 100%
+	h2
+		margin-bottom: 50px
+		font-size: 24px
+		line-height: 28px
+		color: #222929
+		font-weight: normal
+	.underline
+		margin-top: 70px
+		
+// frequent-questions
+
+.frequent-questions
+	padding: 90px 0
+	.underline
+		margin-top: 96px	
+	h3
+		padding-bottom: 6px
+		font-size: 24px
+		line-height: 28px
+		color: #222929
+		font-weight: normal
+	.questions-img
+		display: block
+		width: 160px
+	.question-btn
+		display: block
+		margin-top: 50px	
+		padding-left: 15px
+		color: #222929
+		font-size: 16px
+		line-height: 24px
+		font-weight: 500
+
+
+// Accordeon
+.chevron-icon
+	display: block
+	position: absolute
+	top: 6px
+	right: 0
+	width: 20px
+	height: 20px
+.panel-title
+	position: relative
+.chevron-icon
+	background-image: url('../img/chevron-down.png')
+.collapse-headline.collapsed ~ .chevron-icon
+	background-image: url('../img/chevron-down.png')
+	background-size: 100%
+	background-repeat: no-repeat
+
+.panel
+	padding: 10px 0	
+.panel-title
+	a
+		display: block
+		font-size: 16px
+		line-height: 24px
+		color: #222929
+		opacity: 1.2
+		font-weight: normal
+.panel-body
+	padding: 5px 0 30px
+	font-size: 16px
+	line-height: 24px
+	opacity: 0.72
+
+.footer-form-section
+	h2
+		margin-bottom: 90px
+		margin-top: 60px
+.footer-form
+	max-width: 350px
+	margin: 0 auto
+	margin-bottom: 90px
+	.header-form__input,
+	.header-form__btn
+		margin: 15px 0
+
+//Social networks
+
+.social-networks
+	padding-bottom: 140px	
+	h4
+		margin-bottom: 40px
+		font-size: 24px
+		line-height: 32px
+		color: #222929
+.social-list
+	display: flex
+	flex-direction: row
+	justify-content: center
+	.social-link
+		display: block
+		padding: 0 16px
+		transition: all .2s ease-in-out .2s
+		img
+			display: block
+			width: 48px
+		&:hover	
+			transform: scale(1.1)
+
+// footer-info
+
+.footer-info
+	.footer-text
+		padding: 32px 0
+	p
+		padding: 
+		font-size: 11px
+		line-height: 16px
+		color: #222929	
+		opacity: .56
+	.underline
+		width: 100%
+		height: 1px
+		background-color: rgba(131, 143, 131, 0.32)
+
+// Footer	
+
+.footer
+	padding: 32px 0	
+	.footer-copyright
+		margin-top: 32px
+		text-align: center
+		font-size: 14px
+		line-height: 100%
+		color: #626662
+		opacity: 0.56
+.footer-nav
+	display: flex
+	flex-direction: row
+	justify-content: center
+	a
+		padding: 0 20px
+		font-size: 14px
+		color: #222929
+	
+
+	// Modile Navigation
+.modile-nav
+	display: none
+	position: absolute
+	top: 20px
+	right: 20px	
+	width: 30px
+	height: 30px
+	div
+		height: 3px
+		background-color: #000
+		margin: 4px
+		cursor: pointer
+
+
+// About Us Page
+.journey-section
+	.journey-description
+		color: #4E6665
+	.key-element
+		width: 350px
+		margin: 110px auto 0
+		font-size: 36px
+		line-height: 48px
+		color: #08CCC5
+		
+.team-section
+	margin-bottom: 100px		
+.team-member-wrap
+	padding: 45px 0
+	.main-info
+		width: 300px
+		text-align: center
+		.photo
+			display: block
+			width: 250px
+			height: 250px
+			margin: 0 auto
+			background-color: #C4C4C4
+			border-radius: 50%
+		.name
+			margin-top: 20px
+			font-size: 24px
+			color: #222929
+		.linkedin-link
+			display: block
+			color: #4E6665a6
+			span
+				vertical-align: top
+			img
+				margin-left: 8px
+				width: 20px
+				height: 20px
+
+	.work-history
+		margin-top: 20px
+		list-style-type: none
+		padding-left: 0
+		li
+			position: relative
+			padding: 5px 0 5px 20px
+			font-size: 12px
+			line-height: 20px
+			color: #4E6665
+			&:before
+				content: '—'
+				position: absolute
+				left: 0
+				top: 3px
+
+
+/* ------------ Updated 14-Nov-19 ------------- */
+// About Us section
+.journey-wrap
+	width: 98%
+.journey-section 
+	padding: 160px 0 120px
+	.title
+		margin-bottom: 70px
+		font-size: 62px
+		line-height: 48px
+		font-weight: 600
+	.journey-description
+		margin-bottom: 0
+	.key-element
+		width: 100%
+		margin: 50px 0 0
+.team-member-wrap 
+	.main-info
+		margin: 0 auto
+
+
+/* ------------ Updated 15-Nov-19 ------------- */
+
+// Watch video section
+.watch-video-section
+	padding: 40px 0
+.watch-video-block
+	position: relative
+	width: 100%
+	height: 192px
+	background-image: url('../img/wathc-video-bg.png')
+	background-size: 100%
+	background-repeat: no-repeat
+	background-color: #000
+	.watch-video-btn
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 96px
+		height: 96px
+		cursor: pointer
+		transition: all .2s ease .2s
+		&:hover
+			transform: translate(-50%, -45%)
+
+// Vimeo Pop Up
+.vimeo-pop-up
+	position: absolute
+	display: none
+	top: 0
+	bottom: 0
+	right: 0	
+	left: 0
+	background-color: #000000e0
+.vimeo-pop-up-wrap
+	display: block
+	width: 900px
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 100
+	.close-btn	
+		display: block
+		position: absolute
+		width: 32px
+		height: 32px
+		top: 0px
+		right: -50px
+		cursor: pointer
+
+
+
+// Waitlist pop up
+.waitlist-pop-up
+	position: absolute
+	display: none
+	top: 0
+	bottom: 0
+	right: 0	
+	left: 0
+	background-color: #000000e0
+	.waitlist-pop-up-wrap
+		padding: 56px 90px 56px
+		display: block
+		width: 540px
+		position: fixed
+		top: 50%
+		left: 50%
+		background-color: #fff
+		border-radius: 8px
+		transform: translate(-50%, -50%)
+		z-index: 100
+		color: #222929
+		h3
+			font-size: 36px
+			font-weight: 500
+		p
+			padding: 24px 0
+			
+		.close-btn	
+			display: block
+			position: absolute
+			width: 32px
+			height: 32px
+			top: 0px
+			right: -50px
+			cursor: pointer
+		.close-btn.mobile
+			display: none
+
+// Historical interest rate with Linen App
+.rate-pop-up
+	position: absolute
+	display: none
+	top: 0
+	bottom: 0
+	right: 0	
+	left: 0
+	background-color: #000000e0
+	.rate-pop-up-wrap
+		padding: 56px 90px 56px
+		display: block
+		width: 920px
+		position: fixed
+		top: 50%
+		left: 50%
+		background-color: #fff
+		border-radius: 8px
+		transform: translate(-50%, -50%)
+		z-index: 100
+		color: #222929	
+		h2
+			font-size: 36px
+			line-height: 48px
+			color: #222929
+			font-weight: 500
+		h3
+			font-size: 12px
+			color: #515151
+		.rates-img
+			display: block
+			width: 100%
+			margin: 56px 0
+		
+		.rates-btn
+			width: 100%
+			padding: 10px 0
+			border-radius: 52px
+			background-color: #F0F1F0
+			border: none
+			color: #222929
+			text-transform: uppercase
+			font-weight: 600
+		.close-btn	
+			display: block
+			position: absolute
+			width: 32px
+			height: 32px
+			top: 0px
+			right: -50px
+			cursor: pointer
+		.close-btn.mobile
+			display: none
+		.rates-img.phone-img
+			display: none
+
+.sign-up-waitlist-form
+	.email-input, 
+	.submit-btn
+		margin: 16px 0
+		display: block
+		width: 100%
+		height: 48px
+		border-radius: 28px	
+		border: none
+	.email-input
+		font-size: 16px
+		line-height: 32px
+		color: #626662
+		background-color: #F0F1F0
+		&:focus
+			outline: 1px solid #008000
+		&::placeholder
+			text-align: center
+			opacity: .56
+	.submit-btn
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.06em
+		text-transform: uppercase
+		text-align: center
+		font-weight: 600
+		color: #fff
+		background-color: #08CCC5
+		transition: all .2s ease .2s
+		&:hover
+			transform: scale(1.1)
+.app-store-link
+	display: block
+	width: 120px
+	margin: 0 auto
+
+
+	
+// Selected options to earn yield
+.options h2
+	margin-bottom: 20px
+.options-item
+	padding: 10px 0
+	.option-item-name
+		padding-left: 47px
+		font-size: 17px
+		color: #4E6665
+	.options-range-bar
+		padding: 10px 0
+		display: block
+		width: calc(100% - 110px)
+	.option-apy
+		position: absolute
+		width: 110px
+		top: 0
+		right: 0
+		text-align: center
+		font-weight: 600
+.options-header-apy
+	position: absolute
+	width: 110px
+	top: 0
+	right: 0
+	text-align: center
+.options-header,
+.options-header-apy
+	font-size: 12px
+	font-weight: 600
+	text-transform: uppercase
+	letter-spacing: 0.02em
+	text-align: center
+	color: #4E6665
+.option-term-img
+	display: block
+	margin: 0 auto
+	width: 24px
+.options-tips
+	margin-top: 32px
+	font-size: 12px
+	text-align: center
+	opacity: .4
+	padding: 0 15px
+
+// Tabs
+.tabs-wrap
+	width: 340px
+	margin: 36px auto 10px
+	display: flex
+	flex-direction: row
+	justify-content: center
+	border-radius: 32px
+	border: 2px solid #F0F1F0
+	button
+		margin: 2px
+		height: 48px
+		width: 50%
+		border-radius: 32px
+		background-color: #fff
+		border: none
+		font-size: 12px
+		text-transform: uppercase
+		font-weight: 600
+		text-align: center
+		cursor: pointer
+	button.active
+		background-color: #08CCC5
+		color: #fff
+
+.footer-form-section
+	display: flex
+	flex-direction: column
+	height: 100vh
+
+
+
+
+/* ------------ Media Queries ------------ */
+// Large devices (desktops, more than 1200px)
+@media (min-width: 1299.98px)
+  .earn-section > .container
+	  transform: scale(1.2)
+  .linen-cash > .container
+	  transform: scale(1.2)
+  .footer-form-section > .container,
+  .social-networks
+	  transform: scale(1.2)
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px)
+  .earn-section > .container
+	  transform: scale(.8)
+@media (max-height: 700.98px)
+  .earn-section > .container
+	  transform: scale(.8)
+
+@media (max-height: 610.98px)
+	
+  	.earn-section > .container
+	  	transform: scale(.6)
+	
+  
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px)
+	.no-fees-wrapper
+		padding: 96px 10px
+	.modile-nav
+		display: block
+	.header-nav
+		margin-top: 40px	
+		display: none
+		width: 100%
+		padding: 0
+		text-align: center
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
+		a
+			border-bottom: 1px solid #000
+	.linen-cash 
+		height: auto
+		.linen-cash-wrapper
+			width: 100%
+		.full-height
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			height: 100vh
+
+	
+	.rate-pop-up .rate-pop-up-wrap
+		width: 96%
+		margin: 0 auto
+		.close-btn
+			display: none
+			top: 20px
+			right: 20px
+		.close-btn.mobile
+			display: block
+
+	// Vimeo
+	.vimeo-pop-up-wrap
+		width: 90%
+		.close-btn
+			right: 20px
+			top: -40px
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) 
+	.tabs-wrap
+		margin: 20px auto 10px
+	.options
+		margin-top: 10px
+	.logo-wrap
+		float: left
+		width: 160px
+	.earn-wrap
+		width: 100%
+		margin: 30px 0 0 0 
+		.earn-text
+			font-size: 24px
+			line-height: 32px
+		.earn-title
+			margin-bottom: 5px
+			font-size: 44px
+			line-height: 56px
+	.earn-img
+		margin-top: 30px
+	.grow-money-section h2
+		font-size: 28px
+		margin-bottom: 25px
+	.kyle-changes-info
+		padding: 96px 32px 
+		padding-bottom: 90px
+	.how-it-works-list-wrap
+		position: relative 
+		padding: 80px 20px 100px
+		background-image: url('../img/how-it-works-mobile.png')
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: -60px
+			left: 40px
+			width: 120px
+			height: 120px
+			background-image: url('../img/mobile-how-it-works.jpg')
+			background-size: 100%
+			background-repeat: no-repeat
+		.list-item
+			position: relative
+			padding-right: 20%
+			margin-bottom: 30px
+			&::after
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				position: absolute
+				left: -22px
+				top: 8px
+				background-color: #40B679
+			.item-order
+				display: none
+	.how-it-works-section 
+		h2
+			margin-left: 0
+			margin-bottom: 40px
+	.investors-section h2
+		font-size: 23px
+		margin-bottom: 0
+	.investors-section .investors-wrap
+		padding: 24px 10%
+	.frequent-questions 
+		h2
+			margin-left: 0
+			margin-bottom: 10px
+		.question-btn
+			width: 100%
+
+	.footer-form
+		margin-bottom: 40px
+	.grow-money-section h2
+		font-size: 28px
+		line-height: 40px
+	.header-form
+		margin-top: 0
+	.statistic-block
+		padding: 30px 0 40px
+	.no-fees-item .item-img
+		margin-top: 90px
+	.experts
+		padding: 96px 20px 0
+	.linen-cash .linen-cash-wrapper
+		width: 100%
+	.statistic-item .item-text .value-description
+		margin-top: 8px
+
+	/* ------------ Updated 14-Oct-19 ------------- */
+	
+	.earn-section
+		background-image: url('../img/main-img.png')
+		background-repeat: no-repeat
+		background-size: 75%
+		background-position: 140% 35%
+	.statistic-block
+		padding: 100px 0 25px
+
+	/* ------------ Updated 15-Oct-19 ------------- */
+	.options-header, .options-header-apy
+		font-size: 10px
+	
+	.options-item .options-range-bar
+		padding: 6px 0 6px 50px
+	.options-item .option-item-name
+		padding-left: 20px
+
+	.linen-cash
+		height: auto
+		.full-height
+			height: 100vh
+
+	.rate-pop-up .rate-pop-up-wrap .rates-img.desctop-img
+		display: none
+	.rate-pop-up .rate-pop-up-wrap .rates-img.phone-img
+		display: block
+
+	.waitlist-pop-up .waitlist-pop-up-wrap
+		width: 100%
+		padding: 50px 25px
+		.close-btn
+			display: none
+			right: 10px
+			top: 10px
+		.close-btn.mobile
+			display: block
+			z-index: 110
+	
+	.journey-wrap
+		width: 100%
+
+
+	
+    
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+	.header,
+	.earn-section
+		padding: 0 12px
+	.benefits
+		padding: 40px 0 0 0
+	.benefit-item 
+		img
+			width: 56px
+			height: 56px
+		figcaption
+			font-size: 20px
+			line-height: 24px
+			margin: 14px auto
+			text-align: left
+	.footer-form
+		width: 80%
+		margin: 0 auto 80px
+		.header-form__input,
+		.header-form__btn
+			border-radius: 18px
+	.header-form .header-form__btn, 
+	.header-form .header-form__input,
+	.header-form .header-form__info
+		margin: 10px auto
+		max-width: 270px
+		height: 40px
+	.earn-img
+		padding: 20px 0 0 0 
+	.grow-money-section 
+		padding: 20px 0 0 0
+		.mobile-grow
+			width: 96px
+			height: 96px
+	.kyle-changes-info .inner-wrap
+		font-size: 20px
+		line-height: 28px
+		padding: 32px 24px
+	.kyle-changes-info .kyle-changes-that
+		font-size: 20px
+		line-height: 28px
+	.kyle-changes-section .row .col-md-12
+		padding-left: 0!important
+		padding-right: 0!important
+	.how-it-works-section h2
+		font-size: 28px
+	.how-it-works-list-wrap 
+		padding: 80px 40px 40px
+		.list-item
+			font-size: 16px
+			line-height: 24px
+			padding-left: 15px
+			margin-bottom: 35px
+	.frequent-questions 
+		padding: 50px 0
+		.questions-img
+			height: 96px
+			width: 96px
+		h2
+			margin-left: 13px
+			font-size: 28px
+	.panel-title a
+		font-size: 16px
+		line-height: 24px
+	.panel-body
+		font-size: 14px
+		line-height: 20px
+	.frequent-questions .question-btn
+		width: 290px
+		margin-top: 40px
+	.options 
+		padding: 0 14px
+		h2
+			padding-left: 0
+			font-size: 24px
+			line-height: 36px
+			font-weight: normal
+			margin-bottom: 0
+		.subtitle
+			padding-left: 0
+	.range-wrapper .range-bar-img
+		width: 230px
+	.option-block .item
+		width: 100%
+		padding: 0
+		margin: 0 auto
+	.linen-cash 
+		text-align: center
+		padding-top: 90px
+	.no-fees-wrapper
+		padding: 96px 0
+	.experts-item .expert-name
+		font-size: 14px
+		img
+			margin-left: 2px
+			vertical-align: sub
+	.experts-item .expert-img
+		width: 92px
+		height: 92px
+	.footer-form-section h2
+		width: 320px
+		margin: 40px auto
+	.footer-nav a
+		font-size: 13px
+	.footer .footer-copyright
+		font-size: 13px
+	.option-block .title
+		padding-left: 0
+	.range-wrapper
+		padding-left: 12px
+	.option-block .hints
+		padding-left: 0
+		text-align: center
+		margin-top: 15px
+	.experts 
+		padding: 96px 10px 70px
+		h2
+			padding-bottom: 32px
+	.social-networks h4
+		font-weight: normal
+	.option-term-img
+		padding: 10px 0
+
+
+	.rate-pop-up .rate-pop-up-wrap	
+		padding: 50px 25px
+	.watch-video-block
+		background-image: none
+
+// Extra small devices (portrait phones, less than 400px)
+@media (max-width: 399.98px) 
+	.footer-nav
+		flex-direction: column
+		text-align: center
+		font-size: 18px
+		line-height: 32px
+	.options-item .option-item-name
+		padding-left: 15px
+		font-size: 14px
+	.options-item .options-range-bar
+		padding-left: 50px
+
+
+
+
+
+

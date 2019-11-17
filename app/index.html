@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Linen</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	
+	<!-- Google Font Fira Sans -->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700&display=swap" rel="stylesheet">
+	<!-- Google Source Sans Pro -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Custom Style -->
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+	<!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 offset-lg-0 col-12">
+            <a href="#" class="logo-wrap"
+              ><img src="img/logo.svg" alt="Kyle Logo" class="logo-img"
+            /></a>
+            <div class="modile-nav">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <nav class="header-nav">
+              <a class="" href="#">About us</a>
+              <a href="#">Ambassadors</a>
+              <a href="#">FAQs</a>
+              <a href="#">Get the App</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+	<section class="earn-section">
+		<div class="container">
+			<div class="row">
+				<div class="offset-xl-1 col-md-5 offset-md-0 col-12 col-lg-4 ">
+					<div class="earn-wrap">
+						<div class="earn-title">4.98% APY*</div>
+						<h3>* Interest rates change frequently based on supply and demand </h3>
+						<h4><a class="rates-link" href="#">Check historical interest rates →</a></h4>
+						<div class="earn-text">
+							Earn higher yield <br> on your cash
+						</div>
+						<div class="statistic-block">
+							<div class="statistic-item">
+								<img src="img/people-icon.png" alt="People Icon">
+								<div class="item-text">
+									<div class="value">25,815</div>
+									<div class="value-description">People earning</div>
+								</div>
+							</div>
+							<div class="statistic-item">
+								<img src="img/people-icon.png" alt="People Icon">
+								<div class="item-text">
+									<div class="value">92,466,041</div>
+									<div class="value-description">Amount deposited</div>
+								</div>
+							</div>
+						</div>
+						<form action="" class="header-form">
+							<input class="header-form__input" type="text" placeholder="Enter e-mail address">
+							<button class="header-form__btn" id="play">Get early access</button>
+							<div class="header-form__info">By clicking "Get early+ access" you agree <br> to our <a href="#">Terms of Service</a>  and <a href="#">Privacy Policy</a> </div>
+						</form>
+					</div>
+					
+					
+				</div>
+				<div class="col-md-7 d-none d-md-block">
+					<img src="img/main-img.png" alt="Earn" class="earn-img">
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<!-- Watch our video -->
+	<section class="watch-video-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="watch-video-block">
+						<img src="img/play-btn.png" alt="Play Button" class="watch-video-btn">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Your options to earn interest -->
+	<section class="options" id="tabs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-12">
+					<h2 class="text-center">Selected options to earn yield </h2>
+				</div>
+			</div>
+			<!-- Tabs -->
+			<div class="row">
+				<div class="col-12 d-block d-sm-block d-md-block d-lg-none d-xl-none">
+					<div class="tabs-wrap">
+						<button :class="{active: !termsVisibility}" @click="termsVisibility = !termsVisibility" class="yield-tab">YIELD</button>
+						<button :class="{active: termsVisibility}" @click="termsVisibility = !termsVisibility"  class="terms-tab">Terms</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<!-- Options Header -->
+					<div class="row options-item">
+						<div class="col-lg-3 col-md-4"></div>
+						<div class="col-lg-6 col-md-5 d-none d-sm-none d-md-none d-lg-block">
+							<div class="options-header-apy" style="margin-top: 10px;">APY</div>
+						</div>
+						<div class="col-lg-3 col-md-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="options-header" style="margin-top: 10px;">high Yield</div>
+								</div>
+								<div class="col-md-4">
+									<div class="options-header">Withdraw anytime</div>
+								</div>
+								<div class="col-md-4">
+									<div class="options-header">FDIC Insured</div>
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6 offset-6 offset-md-4">
+							<div class="row">
+								<div class="col-4">
+									<div class="options-header">high Yield</div>
+								</div>
+								<div class="col-4">
+									<div class="options-header">Withdraw anytime</div>
+								</div>
+								<div class="col-4">
+									<div class="options-header">FDIC Insured</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Piggy bank -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/pig-icon.png" alt=""><span class="option-item-name">Piggy bank</span>
+						</div>
+						<div v-if="!termsVisibility" class="col-lg-6 col-md-12">
+							<img src="img/pig-range-new.png" alt="" class="options-range-bar">
+							<div class="option-apy">—</div>
+						</div>		
+						<div class="col-lg-3 col-md-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/hammer-icon.png" alt="Hummer Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/hammer-icon.png" alt="Hummer Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Digital banks -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/digital-icon.png" alt="Digital Icon"><span class="option-item-name">Digital banks</span>
+						</div>
+						<div v-if="!termsVisibility"  class="col-lg-6 col-md-12">
+							<img src="img/digital-range-new.png" alt="" class="options-range-bar">
+							<div class="option-apy blue-text-color">1.90%</div>
+						</div>
+						<div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Positive Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/checked-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Positive Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/checked-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- FLRN Bond ETF -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/schedule-icon.png" alt=""><span class="option-item-name">FLRN Bond ETF</span>
+						</div>
+						<div v-if="!termsVisibility" class="col-lg-6 col-md-12">
+							<img src="img/bond-range.png" alt="" class="options-range-bar">
+							<div class="option-apy blue-text-color">2.37%</div>
+						</div>
+						<div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Lending Club -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/landing-club-icon-new.png" alt=""><span class="option-item-name">Lending Club</span>
+						</div>
+						<div v-if="!termsVisibility" class="col-lg-6 col-md-12">
+							<img src="img/lending-range-new.png" alt="" class="options-range-bar">
+							<div class="option-apy blue-text-color">4.50%</div>
+						</div>
+						<div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Prosper -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/prosper-icon-new.png" alt="Digital Icon"><span class="option-item-name">Prosper</span>
+						</div>
+						<div v-if="!termsVisibility" class="col-lg-6 col-md-12">
+							<img src="img/prosper-range-new.png" alt="" class="options-range-bar">
+							<div class="option-apy blue-text-color">5.20%</div>
+						</div>
+						<div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- FLRN Bond ETF -->
+					<div class="row options-item">
+						<div class="col-6 col-lg-3 col-md-4">
+							<img class="option-img" src="img/linen-icon.png" alt=""><span class="option-item-name">Linen Cash</span>
+						</div>
+						<div v-if="!termsVisibility" class="col-lg-6 col-md-12">
+							<img src="img/linen-range-new.png" alt="" class="options-range-bar">
+							<div class="option-apy blue-text-color">4.90%</div>
+						</div>
+						<div class="col-lg-3 d-none d-sm-none d-md-none d-lg-block">
+							<div class="row">
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-md-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+						<div v-if="termsVisibility" class="col-lg-3 col-md-6 col-6">
+							<div class="row">
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/positive-icon.png" alt="Icon">
+								</div>
+								<div class="col-4">
+									<img class="option-term-img" src="img/negative-icon.png" alt="Icon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="underline d-none d-md-block"></div>
+			</div>
+			<div class="row">
+				<div class="options-tips">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">*Data shown as of Nov 07, 2019 if different is not mentioned. FLRN Bond ETF is SPDR® Bloomberg Barclays Investment Grade Floating Rate Bond ETF (FLRN), data shown based on 30 Day SEC Yield. Adjusted Net Annualized Return shown for Lending Club, according to Lendingclub.com. Prosper data is Historical Returns, according to prosper.com/invest. Linen Сash APY  shown as of time you visited this page.</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Linen Cash earns you 4.9%* -->
+	<section class="linen-cash">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 offset-lg-1 col-md-12">
+					<div class="full-height">
+						<div class="linen-cash-wrapper">
+						<h2 class="blue-text-color">Linen Cash earns you 4.9%*</h2>
+						<h3>* Interest rates change frequently based on supply and demand </h3>
+						<h4><a class="rates-link" href="#">Check historical interest rates →</a></h4>
+						<p class="linen-cash-text">Returns are provided by borrowers who supply more collateral than value of the loan. Collateral value is monitored in real time. It will be sold if it’s value drops bellow 115%. Profit from selling collateral is used to return your money.</p>
+						</div>
+						<div class="manage-cash-wrapper ">
+							<h2 class="">Manage Cash and Card from the App </h2>
+							<p class="linen-cash-text">Linen Cash works seamlessly with Linen Card to allow you to spend when you need it.  </p>
+							<div class="banners-wrap">
+								<a href="#" class="banner-link"><img src="img/app-store-banner.png" alt="Apple Store"></a>
+								<a href="#" class="banner-link"><img src="img/google-play-banner.png" alt="Google Play Store"></a>
+							</div>
+						</div>
+						</div>
+					
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="linen-cash-img-wrapper">
+						<img class="linen-cash-img" src="img/main-img.png" alt="Linen Cash">
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<!-- No fees section -->
+	<section class="no-fees">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="no-fees-wrapper">
+						<div class="row">
+							<div class="col-md-4 order-md-1 order-1">
+								<div class="no-fees-item">
+									<img src="img/no-fees.png" alt="No fees" class="item-img d-none d-md-block">
+									<div class="item-description">
+										Start with as little as $5
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 order-md-2 order-3">
+								<div class="no-fees-item">
+									<img src="img/no-fees.png" alt="No fees" class="item-img ">
+									<div class="item-description d-none d-md-block">
+										Pay no fees
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 order-md-3 order-2">
+								<div class="no-fees-item">
+									<img src="img/no-fees.png" alt="No fees" class="item-img d-none d-md-block">
+									<div class="item-description">
+										Withdraw at any time
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Built by industry leading experts -->
+	<section class="experts">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-md-12">
+					<h2 class="text-center">Built by industry leading experts</h2>
+				</div>
+				<div class="col-md-11">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-6">
+							<div class="experts-item text-center">
+								<div class="expert-img">
+									
+								</div>
+								<div class="expert-name"><span>Vitaly Bahachuk</span><a href="#"><img src="img/linkedin-icon.png" alt="Linkedin"></a>	</div>
+								<div class="position">CEO</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<div class="experts-item text-center">
+								<div class="expert-img">
+									
+								</div>
+								<div class="expert-name"><span>Alex Bazhanau</span><a href="#"><img src="img/linkedin-icon.png" alt="Linkedin"></a>	</div>
+								<div class="position">CEO</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<div class="experts-item text-center">
+								<div class="expert-img">
+									
+								</div>
+								<div class="expert-name"><span>Maksim Okala-Kulak</span><a href="#"><img src="img/linkedin-icon.png" alt="Linkedin"></a>	</div>
+								<div class="position">Product Design</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<div class="experts-item text-center">
+								<div class="expert-img">
+									
+								</div>
+								<div class="expert-name"><span>Robert Leshner</span><a href="#"><img src="img/linkedin-icon.png" alt="Linkedin"></a>	</div>
+								<div class="position">Advisor</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Trusted by leading investors -->
+	<section class="investors-section">
+		<div class="container">
+			<div class="col-md-12">
+				<h2 class="text-center">Backed by leading investors</h2>
+			</div>
+			<div class="row investors-wrap justify-content-md-center">
+				<div class="col-12 col-md-12 col-lg-10">
+					<div class="row">
+						<div class="col-6 col-md-3">
+							<img src="img/logo-polychain.png" alt="Logo Polychain" class="investor-img">	
+						</div>
+						<div class="col-6 col-md-3">
+							<img src="img/logo-coinbase.png" alt="Logo Coinbase" class="investor-img">	
+						</div>
+						<div class="col-6 col-md-3">
+							<img src="img/logo-hashkey.png" alt="Logo Hashkey" class="investor-img">
+						</div>
+						<div class="col-6 col-md-3">
+							<img src="img/logo-wyre-bgcolor.png" alt="Logo Wyre" class="investor-img">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="underline"></div>
+		</div>
+		
+	</section>
+
+	<!-- Frequent questions -->
+	<section class="frequent-questions">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 offset-md-4 coll-11">
+					<div class="container">
+						<h3>Frequent questions</h3>
+						<div class="panel-group" id="accordion">
+							<!-- --- -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapse-headline " data-toggle="collapse" data-parent="#accordion" href="#collapse1">Why should I use the Linen App?</a>
+										<div class="chevron-icon"></div>
+									</h4>
+								</div>
+								<div id="collapse1" class="panel-collapse collapse">
+									<div class="panel-body">When it comes to managing personal finances, you have many options. But if you want to make the most of your dollar, Kyle is the answer. We provide access to high-interest rates lending opportunities secured by cryptocurrency investments. We think our members, alongside large institutions, should reap those benefits in real-time. Based on history, these interest rates have ranged from 3.5-9% APR.</div>
+								</div>
+							</div>
+							<!-- --- -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapse-headline"  data-toggle="collapse" data-parent="#accordion" href="#collapse2">How safe is my money?</a>
+										<div class="chevron-icon"></div>
+									</h4>
+								</div>
+								<div id="collapse2" class="panel-collapse collapse">
+									<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								</div>
+							</div>
+							<!-- --- -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="collapse-headline"  data-toggle="collapse" data-parent="#accordion" href="#collapse3">Why doesn’t anyone else offer these rates?</a>
+										<div class="chevron-icon"></div>
+									</h4>
+								</div>
+								<div id="collapse3" class="panel-collapse collapse">
+									<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+					<a href="#" class="question-btn"><span>More questions</span> <span><img src="img/arrow.png" alt="More questions"></span></a>
+				</div>
+			</div>
+			<div class="underline"></div>
+		</div>
+	</section>
+
+	<!-- Footer form -->
+	<section class="footer-form-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<h2 class="text-center">Start earning higher yield</h2>
+				</div>
+				<div class="col-md-8">
+					<form action="" class="header-form footer-form">
+					<input class="header-form__input" type="text" placeholder="Enter e-mail address">
+					<button class="header-form__btn">Get early access</button>
+					<div class="header-form__info">By clicking "Get early+ access" you agree <br> to our <a href="#">Terms of Service</a>  and <a href="#">Privacy Policy</a> </div>
+				</form>
+				</div>
+			</div>
+		</div>
+			<!-- Social Networks	 -->
+		<div class="social-networks">
+			<h4 class="text-center">Stay in the loop with Linen</h3>
+			<div class="social-list">
+				<a class="social-link" href="https://www.facebook.com/LinenApp/">
+					<img src="img/facebook-icon.png" alt="Facebook">
+				</a>
+				<a class="social-link" href="https://twitter.com/getlinenapp">
+					<img src="img/twitter-icon.png" alt="Twitter">
+				</a>
+				<a class="social-link" href="https://linkedin.com/company/getlinenapp">
+					<img src="img/linkedin-new-icon.png" alt="Linkedin">
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	
+
+	<!-- Footer info -->
+	<section class="footer-info">
+		<div class="container">
+			<div class="underline"></div>
+			<div class="row justify-content-center footer-text">
+				<div class="col-md-10">
+					<p>* Yield is variable and changes frequently based on supply and demand in the underlying digital dollar (USDC) liquidity pool on Compound. Linen Cash does not set or control interest rates. Interest rate displayed on the linan.app website and in the mobile app is in real-time. Current performance may be lower or higher. 
+						<br>
+						<br>
+					Linen Cash is a cash management service that allows U.S. residents of certain states to supply funds into a Compound liquidity pool. Linen Cash is developed by Linen Mobile, Inc. Linen Mobile, Inc. is not a bank and the cash or digital cash (USDC) you deposit using Linen mobile app will not be stored at a bank. Linen Mobile, Inc. provides software to access Compound Liquidity pools. Funds supplied to Compound liquidity pools using Linen software are not insured by the Federal Deposit Insurance Corporation (FDIC) or any other government agency. You could lose money accessing liquidity pools using Linen mobile app. 
+					<br>
+					<br>
+					You could lose money by accessing yields through the Linen mobile app. Although the Compound liquidity pool that the Linen mobile app provides access to is overcollateralized and is monitored by third parties for liquidations in real-time, neither Linen nor Compound cannot guarantee it will do so. Accessing Compound liquidity pools is not insured or guaranteed by the Federal Deposit Insurance Corporation (FDIC) or any other government agency. Compound Labs, Inc., the developer of Compound liquidity pools, has no legal obligation to provide software development support to its liquidity pools and you should not expect that Compound Labs, Inc. will provide software development to its liquidity pools at any time. It is possible that Compound liquidity pools will not have enough liquidity at a time of withdrawal if the borrowing demand becomes high.
+					<br>
+					<br>
+					Linen Mobile, Inc. does not charge transaction or debit card fees. Please refer to Card Agreement and banking services provider agreements when become available.    
+				</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="underline"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="footer-nav">
+              <a class="active" href="#">About us</a>
+              <a href="#">Ambassadors</a>
+              <a href="#">FAQs</a>
+              <a href="#">Get the App</a>
+            </nav>
+          </div>
+          <div class="col-md-12">
+            <div class="footer-copyright">
+              © Natmai, 2019
+              <br />
+              <br />
+              44 Tehama St.
+              <br />
+              San Francisco, CA 94105
+              <br />
+              <br />
+              Contact us:
+              <br />
+              hello@linen.app
+            </div>
+          </div>
+        </div>
+      </div>
+	</footer>
+	
+	<!-- Vimeo Pop Up -->
+	<div class="vimeo-pop-up">
+		<div class="vimeo-pop-up-wrap">
+			<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+			<div style="padding:56.25% 0 0 0;position:relative;">
+				<iframe id="vimeo-player" src="https://player.vimeo.com/video/371490473?color=08CCC5&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			<img src="img/cross.png" alt="Close Button" class="close-btn">
+		</div>
+	</div>
+
+	<!-- Sign up to waitlist Pop Up-->
+	<div class="waitlist-pop-up">
+		<div class="waitlist-pop-up-wrap">
+			<h3>Sign up to waitlist</h3>
+			<p>During the next 3 to 6 months we will invite a limited number of users to use the app. Please, leave your email address to get early access. </p>
+			<form action="" class="sign-up-waitlist-form">
+				<input class="email-input" type="text" placeholder="Enter e-mail address">
+				<button class="submit-btn">Get early access</button>
+			</form>
+			<p>Get the app from the store with $1 bonus on your balance to start earning immidiately! You will be able to deposit more funds laster. We invite more people from the waitlist each week.</p>
+			<a href="#" class="app-store-link">
+				<img src="img/app-store-banner.png" alt="">
+			</a>
+			<img src="img/cross.png" alt="Close Icon" class="close-btn">
+			<img src="img/cross-black.png" alt="Close Icon" class="close-btn mobile">
+		</div>
+	</div>
+
+	<!-- Historical interest rate with Linen App -->
+	<div class="rate-pop-up">
+		<div class="rate-pop-up-wrap">
+			<h2>Historical interest rates</h2>
+			<h3>Interest rates change frequently based on supply and demand</h3>
+			<img class="rates-img desctop-img" src="img/rates-img.png" alt="Rates">
+			<img class="rates-img phone-img" src="img/rates-mobile.png" alt="Rates">
+			<button class="rates-btn">Ok</button>
+			<img src="img/cross.png" alt="Close Icon" class="close-btn">
+			<img src="img/cross-black.png" alt="Close Icon" class="close-btn mobile">
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/scripts.min.js"></script>
+
+	<!--Vue js production version, optimized for size and speed -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script>
+		var app = new Vue({
+			el: '#tabs',
+			data: {
+				termsVisibility: 0
+			}
+			})
+	</script>
+</body>
+</html>
